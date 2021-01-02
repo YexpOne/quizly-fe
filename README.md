@@ -1,4 +1,4 @@
-# quiz-ly
+# quizly-f
 
 ## Project setup
 ```
