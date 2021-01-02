@@ -1,114 +1,172 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br />
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener"
-        >vue-cli documentation</a
-      >.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel"
-          target="_blank"
-          rel="noopener"
-          >babel</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint"
-          target="_blank"
-          rel="noopener"
-          >eslint</a
-        >
-      </li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li>
-        <a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a>
-      </li>
-      <li>
-        <a href="https://forum.vuejs.org" target="_blank" rel="noopener"
-          >Forum</a
-        >
-      </li>
-      <li>
-        <a href="https://chat.vuejs.org" target="_blank" rel="noopener"
-          >Community Chat</a
-        >
-      </li>
-      <li>
-        <a href="https://twitter.com/vuejs" target="_blank" rel="noopener"
-          >Twitter</a
-        >
-      </li>
-      <li>
-        <a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a>
-      </li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li>
-        <a href="https://router.vuejs.org" target="_blank" rel="noopener"
-          >vue-router</a
-        >
-      </li>
-      <li>
-        <a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-devtools#vue-devtools"
-          target="_blank"
-          rel="noopener"
-          >vue-devtools</a
-        >
-      </li>
-      <li>
-        <a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener"
-          >vue-loader</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-          rel="noopener"
-          >awesome-vue</a
-        >
-      </li>
-    </ul>
+  <div className="App">
+    <video autoplay loop muted>
+      <source src="./bacc.mp4" type="video/mp4" />
+    </video>
+    <div class="container">
+      <div class="formg">
+        <div>
+          <label for="usr" class="text" id="x">QUİZLY KODUN:</label>
+        </div>
+        <div>
+          <input type="number" class="form1" id="usr" />
+        </div>
+        <div class="start-button">
+          <router-link to="#"
+            ><button id="start"><span> Quize Başla</span></button></router-link
+          >
+        </div>
+
+        <div class="footer">
+          <router-link to="/index"
+            ><a class="a"
+              ><h3 class="text" id="footer">Kendine Uygun Quiz Bul</h3></a
+            ></router-link
+          >
+
+          <!-- linkli yazıyla url oluşturulup onclick ile yönlendirme fonksiyonu
+          çalıştırıldı. -->
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
-<script>
-export default {
-  name: "HelloWorld",
-  props: {
-    msg: String
-  }
-};
-</script>
+<script></script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+#x {
+  text-align: center;
+  font-weight: 900;
+  font-size: xx-large;
+  margin-bottom: 60px;
+  color: #f4511e;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+
+.formg {
+  text-align: center;
+  margin-top: 150px;
+  width: 100%;
 }
-li {
+
+.form1 {
+  width: 200px;
+  height: 40px;
+  font-size: xx-large;
+  margin-bottom: 20px;
+  margin-top: 30;
+  text-align: center;
+}
+
+#start {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+  width: 180px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+#start span {
+  cursor: pointer;
   display: inline-block;
-  margin: 0 10px;
+  position: relative;
+  transition: 0.5s;
 }
-a {
-  color: #42b983;
+
+#start span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#start:hover span {
+  padding-right: 25px;
+}
+
+#start:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.start-button {
+  text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  background-size: cover;
+  overflow: hidden;
+  -webkit-filter: blur(8px);
+  -moz-filter: blur(8px);
+  -o-filter: blur(8px);
+  -ms-filter: blur(8px);
+  filter: blur(20px);
+}
+
+.footer {
+  text-align: center;
+  float: bottom;
+  color: #f4511e;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.a {
+  line-height: 1;
+  display: inline-block;
+  color: #f4511e;
+  text-decoration: none;
+  margin-top: 100px;
+}
+
+.a:after {
+  display: block;
+  content: "";
+  height: 5px;
+  width: 0%;
+  background-color: #f4511e;
+  transition: width 0.3s ease-in-out;
+}
+
+.a:hover {
+  color: #f4511e;
+  text-decoration: none;
+}
+
+/*title after ve hover kısmı ile linklere animasyon eklendi.*/
+.a:hover:after {
+  color: #f4511e;
+  width: 100%;
+}
+
+.a:focus:after {
+  width: 100%;
+  color: #f4511e;
+  text-decoration: none;
 }
 </style>
