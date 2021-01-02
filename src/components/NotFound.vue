@@ -1,18 +1,16 @@
 <template>
-   <div class="error-page">
-  <div>
-    <h1 data-h1="404">404</h1>
-    <p data-p="PAGE NOT FOUND">PAGE NOT FOUND</p>
+  <div class="error-page">
+    <div>
+      <h1 data-h1="404">404</h1>
+      <p data-p="PAGE NOT FOUND">PAGE NOT FOUND</p>
+    </div>
   </div>
-</div>
-<div id="particles-js"></div>
 </template>
 
 <style>
-
 .error-page {
-margin-top:auto;
-margin-bottom:auto;
+  margin-top: auto;
+  margin-bottom: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,7 +33,16 @@ margin-bottom:auto;
   right: 0;
   color: transparent;
   /* webkit only for graceful degradation to IE */
-  background: -webkit-repeating-linear-gradient(-45deg, #71b7e6, #69a6ce, #b98acc, #ee8176, #b98acc, #69a6ce, #9b59b6);
+  background: -webkit-repeating-linear-gradient(
+    -45deg,
+    #71b7e6,
+    #69a6ce,
+    #b98acc,
+    #ee8176,
+    #b98acc,
+    #69a6ce,
+    #9b59b6
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 400%;
@@ -43,7 +50,6 @@ margin-bottom:auto;
   animation: animateTextBackground 10s ease-in-out infinite;
 }
 .error-page h1 + p {
-  
   color: #6d6d6d;
   font-size: 8vh;
   font-weight: bold;
