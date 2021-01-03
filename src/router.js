@@ -5,6 +5,7 @@ import Index from "./components/HelloWorld";
 import NotFound from "./components/NotFound";
 import Login from "./components/Login";
 import Register from "./components/Register";
+import HomePage from "./components/HomePage";
 
 Vue.use(VueRouter);
 
@@ -12,7 +13,8 @@ const routes = [
   { path: "/", component: Index },
   { path: "/notfound", component: NotFound },
   { path: "/login", component: Login },
-  { path: "/register", component: Register }
+  { path: "/register", component: Register },
+  { path: "/index", component: HomePage }
 ];
 
 export const router = new VueRouter({
